@@ -40,9 +40,14 @@ typeInfer (Ifexpr e1 e2 e3) =
 
 -- 2.3
 {-
-  symbol boolean: -> boolean
-  symbol integer: -> integer
-  symbol string: -> string
+  type objectEntry = string x value
+  symbol object: objectEntry* -> value
+  symbol array: value* -> value
+  symbol string: string -> value
+  symbol number: -> string -> integer -> integer -> string -> integer -> value
+  symbol true: -> value
+  symbol false: -> value
+  symbol null: -> value
 -}
 
 -- 2.4
